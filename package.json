@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@babel/parser": "^7.26.3",
+    "chalk": "^5.4.1",
+    "commander": "^12.1.0",
+    "esprima": "^4.0.1",
+    "fs": "^0.0.1-security",
+    "inquirer": "^8.2.5",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "eslint": "^9.17.0"
+  }
+}
