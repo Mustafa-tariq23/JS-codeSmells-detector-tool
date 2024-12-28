@@ -236,4 +236,3 @@ We welcome contributions to improve the tool!
 ### Contact Information
 
 For questions, suggestions, or feedback, feel free to open an issue on [GitHub](https://github.com/Mustafa-tariq23/JS-codeSmells-detector-tool) or contact me at **SP22-BSE-119@cuilahore.edu.pk**.
-```
