@@ -77,7 +77,6 @@ Once a code smell is detected, the following steps can be taken to resolve it:
    - If hard-coded API keys are found, replace them with references to environment variables or configuration files.
 3. **Test the Fix**: After applying the fix, ensure that the code still works as expected and that no other issues are introduced.
 
-
 ## Configuration
 
 The tool can be customized through the `config.js` file, where you can define:
@@ -189,69 +188,3 @@ To add a new code smell detection pattern, follow these steps:
   },
   fix: "Remove unused imports to reduce code complexity and improve performance."
 }
-
-### Extending Regular Expressions
-
-If you need to support additional JavaScript syntax or more complex patterns, you can modify the existing regular expressions used by the tool. However, keep in mind that adding more complex patterns may impact the tool’s performance, especially for larger codebases.
-
-To extend the regular expressions:
-1. Identify the code smell or pattern you want to detect.
-2. Write a new regular expression or modify an existing one to match the desired pattern.
-3. Add the modified or new regular expression to the detection logic in the `detector.js` file under the appropriate check function.
-4. Define the description of the issue and how to fix it.
-   
-Example:  
-You can create a check for unused imports by adding the following snippet:
-
-```javascript
-{
-  name: "Unused Import",
-  check: (lines, filePath, projectRoot) => {
-    const issues = [];
-    const fullContent = lines.join("\n");
-    const importRegex = /import\s+([a-zA-Z_][a-zA-Z0-9_]*)\s+from\s+/g;
-    let match;
-    while ((match = importRegex.exec(fullContent)) !== null) {
-      const lineNumber = fullContent.slice(0, match.index).split("\n").length;
-      if (!new RegExp(`\\b${match[1]}\\b`).test(fullContent)) {
-        issues.push({
-          line: lineNumber,
-          description: `Imported module ${match[1]} is not used. Consider removing it.`,
-        });
-      }
-    }
-    return issues;
-  },
-  fix: "Remove unused imports to reduce code complexity and improve performance.",
-}
-
-### References
-
-- [MDN Web Docs](https://developer.mozilla.org/): Comprehensive resource for JavaScript syntax and best practices.
-- [ESLint Documentation](https://eslint.org/docs/): Linting tool for detecting potential issues in JavaScript code.
-- [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/): Security best practices for web development.
-- [Node.js Documentation](https://nodejs.org/en/docs/): Official documentation for Node.js.
-
----
-
-### License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
----
-
-### Contributing
-
-To contribute to this project:
-
-1. Fork the repository.
-2. Create a new branch for your changes.
-3. Make your changes and write tests if necessary.
-4. Run the tests to ensure everything works as expected.
-5. Submit a pull request.
-
-We welcome contributions to improve the tool!
-
-### Contact Information
-
-For questions, suggestions, or feedback, feel free to open an issue on [GitHub](https://github.com/Mustafa-tariq23/JS-codeSmells-detector-tool) or contact me at **SP22-BSE-119@cuilahore.edu.pk**.
