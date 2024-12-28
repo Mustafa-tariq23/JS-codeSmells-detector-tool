@@ -25,19 +25,21 @@ By using this tool, you can improve your code's maintainability, reduce technica
 ### Steps to Install
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/Mustafa-tariq23/JS-codeSmells-detector-tool.git
-    ```
+
+   ```bash
+   git clone https://github.com/Mustafa-tariq23/JS-codeSmells-detector-tool.git
+   ```
 
 2. Navigate to the project directory:
-    ```bash
-    cd JS-codeSmells-detector-tool
-    ```
+
+   ```bash
+   cd JS-codeSmells-detector-tool
+   ```
 
 3. Install the required dependencies:
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 ## Usage
 
@@ -47,9 +49,9 @@ After installation, you can run the detector via the command line to analyze you
 
 1. To run the tool, use the following command:
 
-    ```bash
-    node detector.js path/to/your/code/files
-    ```
+   ```bash
+   node detector.js path/to/your/code/files
+   ```
 
    - Replace `path/to/your/code/files` with the directory where your code files are located.
    - The script will analyze all JavaScript and TypeScript files in the specified directory and report any detected code smells.
@@ -90,60 +92,73 @@ The tool can be customized through the `config.js` file, where you can define:
 
 The tool detects the following 14 types of code smells, with detailed descriptions and suggestions for fixing each one:
 
-1. **Missing Default in Case Statement**  
-   - Problem: Switch statements that lack a `default` case can lead to unhandled scenarios and unpredictable behavior.  
+1. **Missing Default in Case Statement**
+
+   - Problem: Switch statements that lack a `default` case can lead to unhandled scenarios and unpredictable behavior.
    - Fix: Add a `default` case to ensure all potential inputs are managed.
 
-2. **Large Objects**  
-   - Problem: Objects with too many properties increase complexity and reduce maintainability.  
+2. **Large Objects**
+
+   - Problem: Objects with too many properties increase complexity and reduce maintainability.
    - Fix: Break large objects into smaller, focused objects to improve readability and modularity.
 
-3. **Dead/Unused Code**  
-   - Problem: Unused variables, functions, or unreachable code clutter the codebase and increase security risks.  
+3. **Dead/Unused Code**
+
+   - Problem: Unused variables, functions, or unreachable code clutter the codebase and increase security risks.
    - Fix: Remove or refactor unused code regularly.
 
-4. **Hard-Coded Sensitive Information**  
-   - Problem: Hard-coded sensitive data (e.g., API keys, passwords) exposes security risks.  
+4. **Hard-Coded Sensitive Information**
+
+   - Problem: Hard-coded sensitive data (e.g., API keys, passwords) exposes security risks.
    - Fix: Store sensitive information in environment variables or secure storage solutions.
 
-5. **Active Debugging Code**  
-   - Problem: Leaving debugging code (like `console.log`) in production can expose internal details.  
+5. **Active Debugging Code**
+
+   - Problem: Leaving debugging code (like `console.log`) in production can expose internal details.
    - Fix: Remove or conditionally disable debugging code in production.
 
-6. **Insecure File Handling**  
-   - Problem: Improper file handling during uploads can introduce security vulnerabilities.  
+6. **Insecure File Handling**
+
+   - Problem: Improper file handling during uploads can introduce security vulnerabilities.
    - Fix: Implement strict file validation and sanitization mechanisms.
 
-7. **Lengthy Lines**  
-   - Problem: Lines of code exceeding 80-100 characters are hard to read.  
+7. **Lengthy Lines**
+
+   - Problem: Lines of code exceeding 80-100 characters are hard to read.
    - Fix: Break long lines into smaller, more manageable segments.
 
-8. **Long Parameter List**  
-   - Problem: Functions with many parameters are harder to understand and maintain.  
+8. **Long Parameter List**
+
+   - Problem: Functions with many parameters are harder to understand and maintain.
    - Fix: Reduce the number of parameters by using configuration objects or breaking down the function.
 
-9. **Nested Callbacks (Callback Hell)**  
-   - Problem: Excessively nested callback functions make code hard to read and debug.  
+9. **Nested Callbacks (Callback Hell)**
+
+   - Problem: Excessively nested callback functions make code hard to read and debug.
    - Fix: Use Promises or `async/await` for cleaner, more readable asynchronous code.
 
-10. **Variable Re-Assign**  
-    - Problem: Reassigning variables with different types can lead to bugs.  
+10. **Variable Re-Assign**
+
+    - Problem: Reassigning variables with different types can lead to bugs.
     - Fix: Avoid reassignment or use unique variable names for different purposes.
 
-11. **Duplicate Code**  
-    - Problem: Repeated logic increases redundancy and the risk of errors.  
+11. **Duplicate Code**
+
+    - Problem: Repeated logic increases redundancy and the risk of errors.
     - Fix: Refactor duplicate code into reusable functions or components.
 
-12. **Unused Dependency**  
-    - Problem: Unused dependencies bloat the codebase and may introduce security vulnerabilities.  
+12. **Unused Dependency**
+
+    - Problem: Unused dependencies bloat the codebase and may introduce security vulnerabilities.
     - Fix: Regularly audit and remove unused dependencies.
 
-13. **Empty Catch Block**  
-    - Problem: Catch blocks without proper error handling can obscure issues.  
+13. **Empty Catch Block**
+
+    - Problem: Catch blocks without proper error handling can obscure issues.
     - Fix: Log or handle errors within the `catch` block.
 
-14. **Long Method/Function**  
-    - Problem: Long methods/functions are difficult to maintain and test.  
+14. **Long Method/Function**
+    - Problem: Long methods/functions are difficult to maintain and test.
     - Fix: Break large functions into smaller, focused ones.
 
 ## Tools and Techniques Used
@@ -188,6 +203,8 @@ To add a new code smell detection pattern, follow these steps:
   },
   fix: "Remove unused imports to reduce code complexity and improve performance."
 }
+```
+
 
 ### References
 
@@ -219,3 +236,4 @@ We welcome contributions to improve the tool!
 ### Contact Information
 
 For questions, suggestions, or feedback, feel free to open an issue on [GitHub](https://github.com/Mustafa-tariq23/JS-codeSmells-detector-tool) or contact me at **SP22-BSE-119@cuilahore.edu.pk**.
+```
