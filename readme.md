@@ -188,3 +188,34 @@ To add a new code smell detection pattern, follow these steps:
   },
   fix: "Remove unused imports to reduce code complexity and improve performance."
 }
+
+### References
+
+*   [MDN Web Docs](https://developer.mozilla.org/): Comprehensive resource for JavaScript syntax and best practices.
+*   [ESLint Documentation](https://eslint.org/docs/): Linting tool for detecting potential issues in JavaScript code.
+*   [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/): Security best practices for web development.
+*   [Node.js Documentation](https://nodejs.org/en/docs/): Official documentation for Node.js.
+
+---
+
+### License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+### Contributing
+
+To contribute to this project:
+
+1.  Fork the repository.
+2.  Create a new branch for your changes.
+3.  Make your changes and write tests if necessary.
+4.  Run the tests to ensure everything works as expected.
+5.  Submit a pull request.
+
+We welcome contributions to improve the tool!
+
+### Contact Information
+
+For questions, suggestions, or feedback, feel free to open an issue on [GitHub](https://github.com/Mustafa-tariq23/JS-codeSmells-detector-tool) or contact me at **SP22-BSE-119@cuilahore.edu.pk**.
